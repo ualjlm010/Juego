@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1320" fill="none">
+<defs>
+ <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#59A9D0"/><stop offset=".52" stop-color="#D8D4AE"/><stop offset="1" stop-color="#F1BA78"/></linearGradient>
+ <linearGradient id="hill" x2="0" y2="1"><stop stop-color="#78A878"/><stop offset="1" stop-color="#385F55"/></linearGradient>
+ <linearGradient id="glass" x2="0" y2="1"><stop stop-color="#C2E0D6"/><stop offset=".48" stop-color="#568BA0"/><stop offset="1" stop-color="#263F55"/></linearGradient>
+ <linearGradient id="stone" x2="0" y2="1"><stop stop-color="#D6C9A7"/><stop offset="1" stop-color="#68717A"/></linearGradient>
+ <radialGradient id="sun"><stop stop-color="#FFF3BE" stop-opacity=".86"/><stop offset="1" stop-color="#FFF3BE" stop-opacity="0"/></radialGradient>
+ <filter id="soft"><feGaussianBlur stdDeviation="22"/></filter>
+</defs>
+<path fill="url(#sky)" d="M0 0h900v1320H0z"/><circle cx="697" cy="260" r="270" fill="url(#sun)"/>
+<path fill="#A7C0B4" opacity=".67" d="m-40 560 160-172 105 95 145-223 183 233 125-150 260 202v330H-40z"/>
+<path fill="#668D7A" d="m-20 702 202-180 147 143 173-180 216 208 126-119 113 74v379H-20z"/>
+<!-- Kanto gym, a broad glass-roofed battle hall with visible entry stairs -->
+<ellipse cx="462" cy="832" rx="381" ry="70" fill="#334E51" opacity=".35" filter="url(#soft)"/>
+<path fill="#667583" stroke="#DED2B4" stroke-width="13" d="m84 808 38-267 55-46 38-123h488l38 123 55 46 38 267z"/>
+<path fill="url(#stone)" d="m111 791 35-239 49-44 37-108h416l37 108 49 44 35 239z"/>
+<path fill="url(#glass)" stroke="#F2E7CB" stroke-width="12" d="m226 507 29-82h390l29 82 34 237H192z"/>
+<g stroke="#E9E6D7" stroke-opacity=".52" stroke-width="11"><path d="m290 432 18 312m89-312 7 312m92-312-7 312m92-312-18 312"/><path d="M208 635h490" stroke="#F6D298" stroke-width="17"/></g>
+<path fill="#364C5A" stroke="#E3D5B6" stroke-width="10" d="M371 651h158v145H371z"/><path fill="#9C5C49" d="M392 669h116v127H392z"/>
+<circle cx="450" cy="393" r="54" fill="#F5EAD0" stroke="#667583" stroke-width="14"/><path d="M397 393h106" stroke="#D5544D" stroke-width="17"/><circle cx="450" cy="393" r="19" fill="#F5EAD0" stroke="#667583" stroke-width="10"/>
+<path fill="#D2B991" d="M302 805h296v31H302zm-40 34h376v31H262zm-42 34h460v34H220z"/>
+<path fill="url(#hill)" d="M0 900c158-122 302-68 425-4s275 72 475-38v462H0z"/>
+<path fill="#9D775A" d="M327 905h246l238 415H91z" opacity=".86"/><path stroke="#DCC294" stroke-width="14" d="m346 924-202 396m408-396 202 396"/>
+<g fill="#F1D89A" opacity=".8"><circle cx="102" cy="475" r="8"/><circle cx="773" cy="395" r="10"/><circle cx="163" cy="802" r="7"/><path d="m118 316 11 28 29 11-29 11-11 29-11-29-29-11 29-11z"/></g>
+<g fill="#34594E" opacity=".88"><path d="M0 859h108l-16-155-38-54-38 54z"/><path d="M792 868h108l-18-164-36-54-38 54z"/></g>
+</svg>

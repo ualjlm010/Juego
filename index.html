@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#070c18" />
+  <link rel="icon" href="data:," />
+  <title>Pokémon: Black Market — RPG 2D</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/style.css?v=19" />
+</head>
+<body>
+
+  <!-- LIENZO DE JUEGO A PANTALLA COMPLETA TOTAL (POKÉBONK FULL-BLEED) -->
+  <canvas id="world" width="1280" height="720" aria-label="Lienzo de juego"></canvas>
+
+  <!-- BARRA SUPERIOR FLOTANTE ESTILO POKÉBONK -->
+  <header id="topbar" class="topbar">
+    <!-- Grupo Izquierdo: Idioma, Pantalla Completa, Sonido, Accesos Rápidos -->
+    <div class="topbar-left">
+      <div class="pill pill-ghost" title="Idioma">
+        <svg class="ui-sprite"><use href="./assets/ui/sprites.svg#map"/></svg>
+        <span class="pill-text">ES</span>
+      </div>
+
+      <button id="soundTopBtn" class="pill pill-btn pill-icon-only" title="Alternar Sonido">
+        <svg id="soundTopIcon" class="ui-sprite"><use href="./assets/ui/sprites.svg#sound"/></svg>
+      </button>
+
+      <button id="fullscreenTopBtn" class="pill pill-btn" title="Alternar pantalla completa (F / F11)">
+        <svg class="ui-sprite fs-icon"><use href="./assets/ui/sprites.svg#fullscreen"/></svg>
+        <span class="fs-label">FULLSCREEN</span>
+      </button>
+
+      <button id="hudShopQuick" class="pill pill-btn pill-accent-market" title="Mercado Negro Clandestino">
+        <svg class="ui-sprite"><use href="./assets/ui/sprites.svg#shop"/></svg>
+        <span class="pill-text">MERCADO</span>
+      </button>
+    </div>
+
+    <!-- Grupo Derecho: Perfil del Entrenador, Monedas y Contadores -->
+    <div class="topbar-right">
+      <!-- Píldora de Perfil de Entrenador -->
+      <div class="pill pill-profile" id="hudProfilePill" title="Perfil y Facción activa">
+        <div class="profile-avatar">
+          <img id="leadMonImg" class="lead-mon-img" src="./assets/pokemon/sprites/charizard.png" alt="Líder" />
+          <svg class="ui-sprite profile-empty" aria-hidden="true"><use href="./assets/ui/sprites.svg#trainer"/></svg>
+          <div id="leadHpBar" class="hp-bar-mini hidden">
+            <div id="leadHpFill" class="hp-bar-fill-mini" style="width: 100%;"></div>
+          </div>
+        </div>
+        <div class="profile-meta">
+          <span class="profile-name">Entrenador</span>
+          <span id="factionIndicator" class="faction-tag-badge faction-guardian">ALIANZA</span>
+        </div>
+      </div>
+
+      <!-- Fondos Legales: Pokédólares -->
+      <div class="pill pill-currency pill-gold" title="Pokédólares (₽)">
+        <svg class="ui-sprite currency-ico coin"><use href="./assets/ui/sprites.svg#coin"/></svg>
+        <b id="moneyDisplay">500 ₽</b>
+      </div>
+
+      <!-- Fondos Clandestinos: Fichas Sombra -->
+      <div class="pill pill-currency pill-dark" title="Fichas Sombra Clandestinas (◈)">
+        <svg class="ui-sprite currency-ico gem"><use href="./assets/ui/sprites.svg#chip"/></svg>
+        <b id="darkTokenDisplay">0 ◈</b>
+      </div>
+
+      <!-- Poké Balls Disponibles -->
+      <div class="pill pill-currency pill-balls" title="Poké Balls">
+        <svg class="ui-sprite currency-ico ball"><use href="./assets/ui/sprites.svg#ball"/></svg>
+        <b id="ballCount">8</b>
+      </div>
+
+      <!-- Contador de Pokédex / Investigación -->
+      <div class="pill pill-currency pill-dex" title="Especies investigadas en la Pokédex">
+        <svg class="ui-sprite currency-ico dex"><use href="./assets/ui/sprites.svg#book"/></svg>
+        <b id="researchCount">0/74</b>
+      </div>
+
+      <!-- Botón de Pausa / Ajustes -->
+      <button id="pauseBtn" class="pill pill-btn pill-icon-only" title="Pausa y Opciones (Esc)">
+        <svg class="ui-sprite"><use href="./assets/ui/sprites.svg#settings"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- HUD DE EXPLORACIÓN Y GESTIÓN -->
+  <div id="hud" class="hud hidden">
+    <!-- Indicador de Zona Flotante -->
+    <div class="location-badge">
+      <div class="loc-pin"><svg class="ui-sprite"><use href="./assets/ui/sprites.svg#map"/></svg></div>
+      <div class="loc-text">
+        <span id="locationName">SALA</span>
+        <small id="locationSub">BASE DE OPERACIONES</small>
+      </div>
+    </div>
+
+    <!-- Botón de Retorno al Refugio (Visible solo en campo salvaje / expedición) -->
+    <button id="returnToRefugioBtn" class="return-refugio-badge hidden" title="Volver a la sala">
+      <span class="rrb-icon">⌂</span>
+      <span class="rrb-text">VOLVER A SALA</span>
+    </button>
+
+    <!-- TARJETA CONTEXTUAL DE ENCUENTRO SALVAJE (ACCIONES DIRECTAS CON RATÓN) -->
+    <div id="wildTargetCard" class="wild-target-card hidden">
+      <div class="wtc-pokemon">
+        <img id="wtcSprite" class="wtc-sprite" src="./assets/pokemon/sprites/pikachu.png" alt="Pokémon" />
+        <div class="wtc-meta">
+          <div class="wtc-title-row">
+            <span id="wtcName" class="wtc-name">Pikachu</span>
+            <span id="wtcLevel" class="badge-pill gold">Nv. 12</span>
+          </div>
+          <div id="wtcTypes" class="wtc-types">
+            <span class="type-tag type-electric">Eléctrico</span>
+          </div>
+        </div>
+      </div>
+      <div class="wtc-actions">
+        <button id="wtcFightBtn" class="wtc-btn wtc-btn-fight" title="Entrar en combate por turnos">
+          <span class="wtc-btn-ico"><svg class="ui-sprite"><use href="./assets/ui/sprites.svg#team"/></svg></span>
+          <span>COMBATIR</span>
+        </button>
+        <button id="wtcCatchBtn" class="wtc-btn wtc-btn-catch" title="Intentar captura rápida con Poké Ball">
+          <span class="wtc-btn-ico"><svg class="ui-sprite"><use href="./assets/ui/sprites.svg#ball"/></svg></span>
+          <span>CAPTURAR</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- WIDGET DE ACCIONES RÁPIDAS DEL REFUGIO (MODO BASE / POKÉBONK HUB) -->
+    <div id="refugioActionsWidget" class="refugio-actions-widget">
+      <!-- Botón Héroe de Salida a Expedición -->
+      <button id="expeditionHeroBtn" class="refugio-hero-card" title="Elegir expedición y salir a explorar el campo salvaje">
+        <div class="rhc-icon"><svg class="ui-sprite"><use href="./assets/ui/sprites.svg#map"/></svg></div>
+        <div class="rhc-body">
+          <span class="rhc-tag">CAMPO SALVAJE</span>
+          <span class="rhc-title">EXPLORAR</span>
+          <small class="rhc-sub">Pradera · Bosque · Cantera</small>
+        </div>
+        <span class="rhc-arrow">▶</span>
+      </button>
+
+      <!-- Botón Rápido de Curación 100% -->
+      <button id="quickHealBtn" class="refugio-action-pill pill-heal" title="Restaurar toda la salud del equipo al 100%">
+        <span class="rap-icon"><svg class="ui-sprite"><use href="./assets/ui/sprites.svg#heart"/></svg></span>
+        <div class="rap-copy">
+          <span>CURAR</span>
+          <small>CENTRO MÉDICO</small>
+        </div>
+      </button>
+
+      <!-- Botón Rápido de Mercado Negro / Tienda -->
+      <button id="quickShopBtn" class="refugio-action-pill pill-market" title="Acceso inmediato al Mercado Negro y Tienda">
+        <span class="rap-icon"><svg class="ui-sprite"><use href="./assets/ui/sprites.svg#shop"/></svg></span>
+        <div class="rap-copy">
+          <span>TIENDA</span>
+          <small>CONTRABANDO & ITEMS</small>
+        </div>
+      </button>
+    </div>
+
+    <!-- DOCK FLOTANTE INFERIOR ESTILO POKÉBONK -->
+    <nav class="hud-dock" aria-label="Navegación principal">
+      <button id="teamBtn" class="dock-pill" title="Equipo activo (T)">
+        <span class="dock-ico"><svg class="ui-sprite"><use href="./assets/ui/sprites.svg#team"/></svg></span>
+        <div class="dock-copy">
+          <span>EQUIPO</span>
+          <b id="teamCount">0/6</b>
+        </div>
+      </button>
+
+      <button id="bagBtn" class="dock-pill" title="Mochila e inventario (B)">
+        <span class="dock-ico"><svg class="ui-sprite"><use href="./assets/ui/sprites.svg#bag"/></svg></span>
+        <div class="dock-copy">
+          <span>BOLSA</span>
+          <small>OBJETOS</small>
+        </div>
+      </button>
+
+      <button id="factionBtn" class="dock-pill" title="Facciones y Disputas (G)">
+        <span class="dock-ico"><svg class="ui-sprite"><use href="./assets/ui/sprites.svg#map"/></svg></span>
+        <div class="dock-copy">
+          <span>FACCIONES</span>
+          <b id="conflictBadge" class="badge-alert hidden">!</b>
+        </div>
+      </button>
+
+      <button id="missionsBtn" class="dock-pill" title="Misiones de campo (M)">
+        <span class="dock-ico"><svg class="ui-sprite"><use href="./assets/ui/sprites.svg#spark"/></svg></span>
+        <div class="dock-copy">
+          <span>MISIONES</span>
+          <small>ENCARGOS</small>
+        </div>
+      </button>
+
+      <button id="collectionBtn" class="dock-pill" title="Pokédex y Colección (C)">
+        <span class="dock-ico"><svg class="ui-sprite"><use href="./assets/ui/sprites.svg#book"/></svg></span>
+        <div class="dock-copy">
+          <span>POKÉDEX</span>
+          <b id="collectionCount">0</b>
+        </div>
+      </button>
+
+      <button id="researchBtn" class="dock-pill" title="Investigación regional">
+        <span class="dock-ico"><svg class="ui-sprite"><use href="./assets/ui/sprites.svg#spark"/></svg></span>
+        <div class="dock-copy">
+          <span>LAB</span>
+          <small>74 ESP.</small>
+        </div>
+      </button>
+    </nav>
+
+    <div id="toast" class="toast"></div>
+  </div>
+
+  <!-- PANTALLA DE INICIO (MENÚ PRINCIPAL 3D GRAPHIC DESIGN) -->
+  <div id="menu" class="screen menu-screen">
+    <div class="menu-backdrop">
+      <img class="menu-scenery" src="./assets/ui/rocket-fortress-night.png" alt="" aria-hidden="true" />
+      <canvas class="menu-scene-effects" aria-hidden="true"></canvas>
+    </div>
+
+    <div class="menu-layout">
+      <!-- Columna Izquierda: Logo y Escaparate 3D Holográfico del Compañero -->
+      <div class="menu-left-panel">
+        <div class="brand-hero">
+          <h1 class="brand-title-pokebonk" aria-label="PokéMarket">
+            <span class="logo-letter" style="--letter:0">P</span><span class="logo-letter" style="--letter:1">O</span><span class="logo-letter" style="--letter:2">K</span><span class="logo-letter" style="--letter:3">É</span><span class="logo-letter highlight-gold" style="--letter:4">M</span><span class="logo-letter highlight-gold" style="--letter:5">A</span><span class="logo-letter highlight-gold" style="--letter:6">R</span><span class="logo-letter highlight-gold" style="--letter:7">K</span><span class="logo-letter highlight-gold" style="--letter:8">E</span><span class="logo-letter highlight-gold" style="--letter:9">T</span>
+          </h1>
+          <div class="menu-prompt"><span id="showcaseCount" class="showcase-count">01 / 74</span></div>
+        </div>
+
+        <!-- Escaparate 3D Holográfico del Pokémon Compañero -->
+        <div class="partner-stage">
+          <div class="stage-pedestal-container">
+            <button id="menuMonPrev" class="mon-nav-btn prev" type="button" title="Pokémon anterior" aria-label="Pokémon anterior"><svg class="ui-sprite"><use href="./assets/ui/sprites.svg#arrow-left"/></svg></button>
+            <div class="stage-pedestal">
+              <div class="stage-orbit-ring"></div>
+              <div class="stage-glow"></div>
+              <img id="menuMonSprite" class="menu-mon" data-sprite-id="charizard" src="./assets/pokemon/sprites/charizard.png" alt="Compañero Pokémon" />
+              <div class="stage-floor-shadow"></div>
+            </div>
+            <button id="menuMonNext" class="mon-nav-btn next" type="button" title="Pokémon siguiente" aria-label="Pokémon siguiente"><svg class="ui-sprite"><use href="./assets/ui/sprites.svg#arrow-right"/></svg></button>
+          </div>
+
+          <!-- Ficha de Telemetría 3D Glassmorphic -->
+          <div class="stage-caption">
+            <div class="stage-name-row">
+              <h2 id="partnerCaptionName">Charizard</h2>
+            <span id="partnerCaptionLevel" class="badge-pill gold">#006</span>
+            </div>
+            <div id="partnerCaptionTypes" class="stage-types-row">
+              <span class="type-tag type-fire">Fuego</span>
+              <span class="type-tag type-flying">Volador</span>
+            </div>
+            <p id="partnerCaptionMeta" class="hidden"></p>
+
+            <!-- Mini Radar de Estadísticas -->
+            <div id="partnerStatsGrid" class="stage-stat-mini-grid">
+              <div class="stat-mini-item"><span>PS</span><div class="smi-bar"><div id="smiHp" class="smi-fill" style="width:78%"></div></div></div>
+              <div class="stat-mini-item"><span>ATQ</span><div class="smi-bar"><div id="smiAtk" class="smi-fill" style="width:84%"></div></div></div>
+              <div class="stat-mini-item"><span>DEF</span><div class="smi-bar"><div id="smiDef" class="smi-fill" style="width:78%"></div></div></div>
+              <div class="stat-mini-item"><span>VEL</span><div class="smi-bar"><div id="smiSpd" class="smi-fill" style="width:100%"></div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna Derecha: Tarjetas de Modo 3D y Navegación Táctil -->
+      <div class="menu-right-panel">
+        <!-- Tarjeta de Continuar Partida (si existe) -->
+        <button id="continueGame" class="continue-play-button hidden" type="button">
+          <svg class="ui-sprite"><use href="./assets/ui/sprites.svg#play"/></svg>
+          <span class="cp-title">ENTRAR</span>
+        </button>
+
+        <!-- Crear un perfil local es la acción secundaria del menú. -->
+        <button id="newGame" class="hero-play-button" type="button" aria-label="Crear perfil local" title="Crear perfil local">
+          <span class="account-action-label">NUEVO PERFIL</span>
+        </button>
+
+        <!-- Banner de Evento Territorial en Vivo -->
+        <div class="event-live-banner" aria-hidden="true">
+          <div class="elb-header">
+            <div class="elb-icon">⚔</div>
+            <div class="elb-copy">
+              <b>DISPUTA TERRITORIAL EN VIVO</b>
+              <small>Alianza Guardiana vs Sindicato Sombra</small>
+            </div>
+            <span class="elb-tag"><span class="blip-dot"></span> EN DISPUTA</span>
+          </div>
+          <div class="elb-progress-bar">
+            <div class="epb-fill epb-guardian" style="width: 52%" title="Alianza Guardiana: 52%"></div>
+            <div class="epb-fill epb-shadow" style="width: 48%" title="Sindicato Sombra: 48%"></div>
+          </div>
+          <div class="elb-footer">
+            <span>Bosque Susurro: ciclo dinámico cada 60s</span>
+            <span>Equilibrio 52% / 48%</span>
+          </div>
+        </div>
+
+        <!-- Cuadrícula de Accesos Rápidos del Menú (6 cards 3D) -->
+        <div class="menu-cards-grid" aria-hidden="true">
+          <button id="menuColQuick" class="menu-card mc-pokedex" type="button">
+            <span class="mc-icon">📖</span>
+            <span class="mc-title">Pokédex</span>
+            <small class="mc-sub">74 Especies</small>
+          </button>
+
+          <button id="menuTeamQuick" class="menu-card mc-team" type="button">
+            <span class="mc-icon">⚔</span>
+            <span class="mc-title">Equipo</span>
+            <small class="mc-sub">Activo / Reserva</small>
+          </button>
+
+          <button id="menuBagQuick" class="menu-card mc-bag" type="button">
+            <span class="mc-icon">🎒</span>
+            <span class="mc-title">Mochila</span>
+            <small class="mc-sub">Fondos & Balls</small>
+          </button>
+
+          <button id="menuFactionsQuick" class="menu-card mc-factions" type="button">
+            <span class="mc-icon">⚖</span>
+            <span class="mc-title">Facciones</span>
+            <small class="mc-sub">Territorios</small>
+          </button>
+
+          <button id="settingsBtn" class="menu-card mc-settings" type="button">
+            <span class="mc-icon">⚙</span>
+            <span class="mc-title">Ajustes</span>
+            <small class="mc-sub">Audio & Partida</small>
+          </button>
+
+          <button id="creditsBtn" class="menu-card mc-credits" type="button">
+            <span class="mc-icon">ⓘ</span>
+            <span class="mc-title">Créditos</span>
+            <small class="mc-sub">SpriteCollab</small>
+          </button>
+        </div>
+
+        <!-- Botón de Pantalla Completa en Menú -->
+        <button id="fullscreenMenuBtn" class="menu-fs-button" type="button" aria-label="Alternar pantalla completa">
+          <span class="fs-menu-label">⛶ ACTIVAR PANTALLA COMPLETA</span>
+          <span class="fs-key-hint">TECLA F</span>
+        </button>
+
+        <div id="saveNotice" class="save-notice hidden" role="status"></div>
+        <div class="menu-footer-credits">PERFIL LOCAL</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CAPA DE PANELES MODALES (ESTILO CAJAS PMD / POKÉBONK) -->
+  <div id="panelLayer" class="panel-layer hidden"></div>
+  <div id="fade" class="fade"></div>
+
+  <script type="module" src="./src/main.js?v=19"></script>
+</body>
+</html>

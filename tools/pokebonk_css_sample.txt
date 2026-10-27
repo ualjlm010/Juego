@@ -1,0 +1,121 @@
+﻿/* ============ PokéSurvivor — interfaz estilo Mundo Misterioso ============
+ * Cajas azules con doble borde blanco, como los menús de PMD, y fuente pixel
+ * local (Pixelify Sans, OFL).
+ */
+/* Pixelify Sans con los números redibujados para que no se confundan (tools/make_font.py). */
+@font-face {
+  font-family: 'Pixelify';
+  src: url('../assets/fonts/PixelifyPS-400.ttf') format('truetype');
+  font-weight: 400 550;
+  font-display: block;
+}
+@font-face {
+  font-family: 'Pixelify';
+  src: url('../assets/fonts/PixelifyPS-700.ttf') format('truetype');
+  font-weight: 551 900;
+  font-display: block;
+}
+
+:root {
+  --ink: #ffffff;
+  --muted: #b9cbf0;
+  --box1: #2c519f;
+  --box2: #1a3170;
+  --edge: #f4f8ff;
+  --edge-in: #5b83d6;
+  --edge-out: #0b1838;
+  --gold: #ffd23f;
+  --gold2: #f0a31e;
+  --red: #ff5f6d;
+  --green: #5fe08a;
+  --shadow: #0a1430;
+  --r1: #9fb1c9; --r2: #5fe08a; --r3: #4fb4ff; --r4: #c47bff; --r5: #ffcb3d;
+  --font: 'Pixelify', 'Segoe UI', system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+.hidden { display: none !important; }
+html, body { height: 100%; margin: 0; }
+body {
+  background: #050914;
+  color: var(--ink);
+  font: 16px/1.35 var(--font);
+  overflow: hidden;
+  user-select: none;
+  -webkit-font-smoothing: none;
+}
+canvas { image-rendering: pixelated; image-rendering: crisp-edges; }
+/* position: fixed + inset: 0 en vez de 100vw / 100vh: en iPhone (sobre todo
+   abierto desde la pantalla de inicio) los vh no cuadraban con la ventana y el
+   juego se veía estirado. */
+#game { display: block; position: fixed; inset: 0; width: 100%; height: 100%; touch-action: none; }
+button { font: inherit; color: inherit; }
+input { font: inherit; }
+
+/* ---------- capas de pantalla ---------- */
+.scr {
+  position: fixed; inset: 0; z-index: 20;
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+  animation: fade .2s ease-out;
+}
+.scr.hidden { display: none; }
+/* Cartas de nivel, objeto y vínculo en el móvil: fuera del recuadro se coge el joystick
+   (touch.js), sin gestos del navegador ahí. Dentro (.box) se desplaza como siempre. */
+body.touch #scr-levelup, body.touch #scr-bond, body.touch #scr-item { touch-action: none; }
+/* Pantallas que se abren con la barra superior a la vista: empiezan debajo de ella. */
+@media (min-height: 521px) {
+  #scr-goals, #scr-dex, #scr-upgrades, #scr-gacha, #scr-friends, #scr-rank, #scr-lobby, #scr-profile, #scr-shop, #scr-news { padding-top: 66px; }
+}
+.scr.dim { background: radial-gradient(circle at 50% 40%, rgba(10,20,50,.55), rgba(3,6,16,.88)); }
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes pop { from { transform: scale(.94); opacity: 0; } to { transform: none; opacity: 1; } }
+
+/* ---------- caja PMD ---------- */
+.box {
+  position: relative;
+  background: linear-gradient(180deg, var(--box1), var(--box2));
+  border: 3px solid var(--edge);
+  border-radius: 12px;
+  box-shadow: 0 0 0 3px var(--edge-out), inset 0 0 0 2px var(--edge-in), 0 18px 50px rgba(0,0,0,.55);
+  padding: 22px 24px;
+  text-shadow: 2px 2px 0 var(--shadow);
+  animation: pop .22s ease-out;
+  max-height: 100%;
+  overflow: auto;
+}
+.box h1, .box h2, .box h3 { margin: 0 0 6px; font-weight: 700; letter-spacing: .5px; }
+.box h2 { font-size: 26px; }
+.box h3 { font-size: 18px; }
+.sub { color: var(--muted); margin: 0 0 16px; font-size: 15px; }
+.gold { color: var(--gold); }
+.center { text-align: center; }
+
+/* ---------- botones ---------- */
+.btn {
+  appearance: none; cursor: pointer;
+  padding: 10px 20px;
+  border: 3px solid var(--edge);
+  border-radius: 9px;
+  background: linear-gradient(180deg, #3d67c0, #26468f);
+  box-shadow: 0 0 0 2px var(--edge-out), 0 4px 0 var(--edge-out);
+  font-size: 17px; font-weight: 700;
+  text-shadow: 2px 2px 0 var(--shadow);
+  transition: transform .06s, filter .12s;
+}
+.btn:hover { filter: brightness(1.15); }
+.btn:active { transform: translateY(2px); box-shadow: 0 0 0 2px var(--edge-out), 0 2px 0 var(--edge-out); }
+.btn:disabled { filter: grayscale(.8) brightness(.7); cursor: not-allowed; transform: none; }
+.btn.gold {
+  background: linear-gradient(180deg, #ffe37a, #f0a31e);
+  color: #3a2300; text-shadow: 1px 1px 0 rgba(255,255,255,.4);
+  border-color: #fff7d6;
+}
+.btn.ghost { background: transparent; box-shadow: none; border-color: rgba(244,248,255,.35); }
+.btn.small { padding: 6px 12px; font-size: 14px; }
+.row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.row.end { justify-content: flex-end; }
+.row.between { justify-content: space-between; }
+.grow { flex: 1; }
+
+/* Lista de menú con cursor (flecha pixel art), como en PMD */

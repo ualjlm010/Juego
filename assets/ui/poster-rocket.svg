@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1320" fill="none">
+<defs>
+ <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#252B40"/><stop offset=".48" stop-color="#675260"/><stop offset="1" stop-color="#D18369"/></linearGradient>
+ <linearGradient id="tower" x2="0" y2="1"><stop stop-color="#606273"/><stop offset="1" stop-color="#222832"/></linearGradient>
+ <linearGradient id="street" x2="0" y2="1"><stop stop-color="#71616A"/><stop offset="1" stop-color="#292A33"/></linearGradient>
+ <radialGradient id="moon"><stop stop-color="#FFDCA2" stop-opacity=".78"/><stop offset="1" stop-color="#FFDCA2" stop-opacity="0"/></radialGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="16"/></filter>
+</defs>
+<path fill="url(#sky)" d="M0 0h900v1320H0z"/><circle cx="712" cy="250" r="253" fill="url(#moon)"/>
+<path fill="#4C4B5D" d="m-20 632 138-148 111 104 140-225 174 246 136-172 233 198v347H-20z"/>
+<g fill="#313747"><path d="M0 552h105v310H0zm109 85h102v242H109zm617-131h91v339h-91zm95 61h104v278H821z"/></g>
+<g fill="#EAA77B" opacity=".73"><path d="M26 581h20v31H26zm48 0h20v31H74zm51 81h18v29h-18zm52 0h18v29h-18zm570-114h18v30h-18zm46 0h18v30h-18zm51 68h18v30h-18zm46 0h18v30h-18z"/></g>
+<!-- Rocket HQ rises above the city: masonry tiers, deep windows, crown and crest -->
+<path fill="#242834" stroke="#A47872" stroke-width="11" d="m183 834 32-580 60-51 26-126h298l27 126 59 51 32 580z"/>
+<path fill="url(#tower)" stroke="#C09A86" stroke-width="9" d="m220 814 28-542 54-45 22-112h250l22 112 54 45 28 542z"/>
+<path fill="#343845" d="M384 156h132v658H384z"/><path fill="#84706B" d="M233 383h434v17H233zm-8 173h450v19H225zm-10 177h470v20H215z"/>
+<g fill="#F2BB8E" stroke="#704D50" stroke-width="8"><path d="M278 296h42v62h-42zm95 0h42v62h-42zm95 0h42v62h-42zm95 0h42v62h-42zM268 439h42v62h-42zm105 0h42v62h-42zm105 0h42v62h-42zm105 0h42v62h-42zM256 612h42v62h-42zm111 0h42v62h-42zm111 0h42v62h-42zm111 0h42v62h-42z"/></g>
+<path fill="#302B37" stroke="#C08D7B" stroke-width="10" d="m205 267 247-94 247 94-24 31-223-75-223 75z"/>
+<circle cx="450" cy="227" r="46" fill="#3A3039" stroke="#DA9B7C" stroke-width="10"/><path d="M426 251v-50h22c32 0 29 29 1 29h-23m24-29 23 50" stroke="#EA4D56" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill="#8E665E" d="M310 814h280v35H310zm-37 37h354v34H273zm-42 36h438v35H231z"/>
+<path fill="url(#street)" d="M0 877c185-73 285-51 450 6 157-61 286-77 450-6v443H0z"/>
+<path stroke="#E6A07B" stroke-opacity=".45" stroke-width="14" d="M430 896 248 1320m220-420 182 420"/>
+<path stroke="#F3C08B" stroke-opacity=".5" stroke-width="10" d="M447 955h25m-49 101h72m-103 121h134"/>
+<g fill="#F9C18A" opacity=".78"><circle cx="121" cy="408" r="7"/><circle cx="765" cy="548" r="8"/><circle cx="129" cy="750" r="6"/><path d="m755 298 10 24 25 10-25 10-10 25-10-25-25-10 25-10z"/></g>
+</svg>

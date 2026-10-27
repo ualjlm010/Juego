@@ -1,0 +1,78 @@
+export const ITEMS = Object.freeze({
+  'poke-ball': Object.freeze({
+    id: 'poke-ball',
+    name: 'Poké Ball',
+    category: 'ball',
+    ballType: 'Poké Ball',
+    price: 200,
+    darkPrice: 0,
+    description: 'Dispositivo estándar para capturar Pokémon salvajes.',
+    multiplier: 1.0,
+  }),
+  'great-ball': Object.freeze({
+    id: 'great-ball',
+    name: 'Super Ball',
+    category: 'ball',
+    ballType: 'Super Ball',
+    price: 600,
+    darkPrice: 15,
+    description: 'Bola de alto rendimiento con mayor índice de captura (×1.5).',
+    multiplier: 1.5,
+  }),
+  'ultra-ball': Object.freeze({
+    id: 'ultra-ball',
+    name: 'Ultra Ball',
+    category: 'ball',
+    ballType: 'Ultra Ball',
+    price: 1200,
+    darkPrice: 30,
+    description: 'Cápsula de tecnología avanzada con excelente índice (×2.0).',
+    multiplier: 2.0,
+  }),
+  'potion': Object.freeze({
+    id: 'potion',
+    name: 'Poción',
+    category: 'heal',
+    price: 300,
+    darkPrice: 0,
+    healAmount: 20,
+    description: 'Rocío medicinal que restaura 20 PS de un Pokémon.',
+  }),
+  'super-potion': Object.freeze({
+    id: 'super-potion',
+    name: 'Superpoción',
+    category: 'heal',
+    price: 700,
+    darkPrice: 20,
+    healAmount: 50,
+    description: 'Tratamiento intensivo que restaura 50 PS.',
+  }),
+  'revive': Object.freeze({
+    id: 'revive',
+    name: 'Revivir',
+    category: 'revive',
+    price: 1500,
+    darkPrice: 40,
+    description: 'Reanima a un Pokémon debilitado con la mitad de sus PS máximos.',
+  }),
+  'dark-radar': Object.freeze({
+    id: 'dark-radar',
+    name: 'Radar Clandestino',
+    category: 'special',
+    price: 2500,
+    darkPrice: 60,
+    description: 'Sensor modificado que rastrea señales variocolor y ejemplares raros.',
+  }),
+  'contraband-chip': Object.freeze({
+    id: 'contraband-chip',
+    name: 'Chip Encriptado',
+    category: 'contraband',
+    price: 1800,
+    darkPrice: 50,
+    description: 'Dispositivo del mercado negro con coordenadas de almacenes rivales.',
+  }),
+});
+
+export function getItemDefinition(id) {
+  return ITEMS[id] || null;
+}

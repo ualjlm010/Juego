@@ -1,0 +1,1342 @@
+[
+  {
+    "id": "bulbasaur",
+    "dex": 1,
+    "name": "Bulbasaur",
+    "type": [
+      "Planta",
+      "Veneno"
+    ],
+    "rarity": "poco común",
+    "difficulty": "uncommon",
+    "color": "#59a674",
+    "shiny": "#84c988",
+    "mark": "♣",
+    "ability": [
+      "Espesura",
+      "Clorofila"
+    ],
+    "desc": "Lleva una semilla en su lomo que crece con él absorbiendo luz solar."
+  },
+  {
+    "id": "ivysaur",
+    "dex": 2,
+    "name": "Ivysaur",
+    "type": [
+      "Planta",
+      "Veneno"
+    ],
+    "rarity": "poco común",
+    "difficulty": "uncommon",
+    "color": "#489668",
+    "shiny": "#73b878",
+    "mark": "♣",
+    "ability": [
+      "Espesura"
+    ],
+    "desc": "Cuando el bulbo de su espalda se hincha, anuncia que pronto florecerá."
+  },
+  {
+    "id": "venusaur",
+    "dex": 3,
+    "name": "Venusaur",
+    "type": [
+      "Planta",
+      "Veneno"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#3d825a",
+    "shiny": "#68a66c",
+    "mark": "♣",
+    "ability": [
+      "Espesura"
+    ],
+    "desc": "La flor de su lomo desprende un aroma embriagador que calma a los demás."
+  },
+  {
+    "id": "charmander",
+    "dex": 4,
+    "name": "Charmander",
+    "type": [
+      "Fuego"
+    ],
+    "rarity": "poco común",
+    "difficulty": "uncommon",
+    "color": "#e87443",
+    "shiny": "#e0c068",
+    "mark": "▲",
+    "ability": [
+      "Mar Llamas",
+      "Poder Solar"
+    ],
+    "desc": "La llama de su cola indica su salud y emociones; arde con fuerza si está alegre."
+  },
+  {
+    "id": "charmeleon",
+    "dex": 5,
+    "name": "Charmeleon",
+    "type": [
+      "Fuego"
+    ],
+    "rarity": "poco común",
+    "difficulty": "uncommon",
+    "color": "#d85a2b",
+    "shiny": "#d4aa52",
+    "mark": "▲",
+    "ability": [
+      "Mar Llamas"
+    ],
+    "desc": "Bravucón por naturaleza. Agita su ardiente cola para amedrentar al enemigo."
+  },
+  {
+    "id": "charizard",
+    "dex": 6,
+    "name": "Charizard",
+    "type": [
+      "Fuego",
+      "Volador"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#bf4519",
+    "shiny": "#454545",
+    "mark": "▲",
+    "ability": [
+      "Mar Llamas"
+    ],
+    "desc": "Vuela en busca de rivales dignos y exhala llamas capaces de fundir la roca."
+  },
+  {
+    "id": "squirtle",
+    "dex": 7,
+    "name": "Squirtle",
+    "type": [
+      "Agua"
+    ],
+    "rarity": "poco común",
+    "difficulty": "uncommon",
+    "color": "#5aa8cf",
+    "shiny": "#78c2b5",
+    "mark": "≈",
+    "ability": [
+      "Torrente",
+      "Cura Lluvia"
+    ],
+    "desc": "Se refugia en su caparazón y contraataca disparando potentes chorros de agua."
+  },
+  {
+    "id": "wartortle",
+    "dex": 8,
+    "name": "Wartortle",
+    "type": [
+      "Agua"
+    ],
+    "rarity": "poco común",
+    "difficulty": "uncommon",
+    "color": "#488eb2",
+    "shiny": "#66aba0",
+    "mark": "≈",
+    "ability": [
+      "Torrente"
+    ],
+    "desc": "Su cola larga y peluda es un símbolo de longevidad muy apreciado."
+  },
+  {
+    "id": "blastoise",
+    "dex": 9,
+    "name": "Blastoise",
+    "type": [
+      "Agua"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#3a7696",
+    "shiny": "#559489",
+    "mark": "≈",
+    "ability": [
+      "Torrente"
+    ],
+    "desc": "Los cañones de su caparazón disparan chorros de agua con precisión milimétrica."
+  },
+  {
+    "id": "caterpie",
+    "dex": 10,
+    "name": "Caterpie",
+    "type": [
+      "Bicho"
+    ],
+    "rarity": "común",
+    "difficulty": "common",
+    "color": "#7cb342",
+    "shiny": "#e0b838",
+    "mark": "⌁",
+    "ability": [
+      "Polvo Escudo",
+      "Fuga"
+    ],
+    "desc": "Sus antenas rojas desprenden un hedor fétido para espantar a los depredadores."
+  },
+  {
+    "id": "butterfree",
+    "dex": 12,
+    "name": "Butterfree",
+    "type": [
+      "Bicho",
+      "Volador"
+    ],
+    "rarity": "poco común",
+    "difficulty": "uncommon",
+    "color": "#7e6eb5",
+    "shiny": "#c97bb8",
+    "mark": "✧",
+    "ability": [
+      "Ojo Compuesto",
+      "Cromolente"
+    ],
+    "desc": "Aletea a gran velocidad esparciendo polvillo tóxico sobre sus atacantes."
+  },
+  {
+    "id": "pidgey",
+    "dex": 16,
+    "name": "Pidgey",
+    "type": [
+      "Normal",
+      "Volador"
+    ],
+    "rarity": "común",
+    "difficulty": "common",
+    "color": "#a88656",
+    "shiny": "#c2a868",
+    "mark": "⋎",
+    "ability": [
+      "Vista Lince",
+      "Tumbos"
+    ],
+    "desc": "Dócil y pacífico. Levanta nubes de arena con las alas para cegar a su presa."
+  },
+  {
+    "id": "pidgeot",
+    "dex": 18,
+    "name": "Pidgeot",
+    "type": [
+      "Normal",
+      "Volador"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#8c6b3e",
+    "shiny": "#b8944d",
+    "mark": "⋎",
+    "ability": [
+      "Vista Lince"
+    ],
+    "desc": "Surca los cielos a velocidad Mach 2 en busca de presas sobre lagos y praderas."
+  },
+  {
+    "id": "rattata",
+    "dex": 19,
+    "name": "Rattata",
+    "type": [
+      "Normal"
+    ],
+    "rarity": "común",
+    "difficulty": "common",
+    "color": "#aa79bd",
+    "shiny": "#d7b34a",
+    "mark": "⌁",
+    "ability": [
+      "Fuga",
+      "Agallas"
+    ],
+    "desc": "Pequeño, rápido y siempre alerta. Sus incisivos no dejan de crecer jamás."
+  },
+  {
+    "id": "pikachu",
+    "dex": 25,
+    "name": "Pikachu",
+    "type": [
+      "Eléctrico"
+    ],
+    "rarity": "poco común",
+    "difficulty": "uncommon",
+    "color": "#f5c842",
+    "shiny": "#e89e33",
+    "mark": "⚡",
+    "ability": [
+      "Electricidad Estática",
+      "Pararrayos"
+    ],
+    "desc": "Almacena electricidad en sus mejillas rojas y la descarga si se siente amenazado."
+  },
+  {
+    "id": "raichu",
+    "dex": 26,
+    "name": "Raichu",
+    "type": [
+      "Eléctrico"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#e8952c",
+    "shiny": "#9e5a1b",
+    "mark": "⚡",
+    "ability": [
+      "Electricidad Estática"
+    ],
+    "desc": "Su larga cola actúa como toma de tierra para protegerse de sus propias descargas."
+  },
+  {
+    "id": "sandshrew",
+    "dex": 27,
+    "name": "Sandshrew",
+    "type": [
+      "Tierra"
+    ],
+    "rarity": "común",
+    "difficulty": "common",
+    "color": "#c9ab5d",
+    "shiny": "#84b878",
+    "mark": "⬟",
+    "ability": [
+      "Velo Arena",
+      "Ímpetu Arena"
+    ],
+    "desc": "Se entierra en terrenos áridos y se enrolla como una bola para resistir ataques."
+  },
+  {
+    "id": "sandslash",
+    "dex": 28,
+    "name": "Sandslash",
+    "type": [
+      "Tierra"
+    ],
+    "rarity": "poco común",
+    "difficulty": "uncommon",
+    "color": "#ad8d44",
+    "shiny": "#6ea860",
+    "mark": "⬟",
+    "ability": [
+      "Velo Arena"
+    ],
+    "desc": "Sus afiladas púas dorsales desgarran la roca con gran rapidez al excavar."
+  },
+  {
+    "id": "vulpix",
+    "dex": 37,
+    "name": "Vulpix",
+    "type": [
+      "Fuego"
+    ],
+    "rarity": "poco común",
+    "difficulty": "uncommon",
+    "color": "#cf633a",
+    "shiny": "#f0df8d",
+    "mark": "▲",
+    "ability": [
+      "Absorbe Fuego",
+      "Sequía"
+    ],
+    "desc": "Al nacer tiene una sola cola blanca; al crecer se divide en seis colas rojizas."
+  },
+  {
+    "id": "ninetales",
+    "dex": 38,
+    "name": "Ninetales",
+    "type": [
+      "Fuego"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#e8db92",
+    "shiny": "#7ea2b5",
+    "mark": "▲",
+    "ability": [
+      "Absorbe Fuego",
+      "Sequía"
+    ],
+    "desc": "Cuenta la leyenda que cada una de sus nueve colas posee un poder místico milenario."
+  },
+  {
+    "id": "jigglypuff",
+    "dex": 39,
+    "name": "Jigglypuff",
+    "type": [
+      "Normal",
+      "Hada"
+    ],
+    "rarity": "común",
+    "difficulty": "common",
+    "color": "#e398aa",
+    "shiny": "#a0dbbb",
+    "mark": "♪",
+    "ability": [
+      "Gran Encanto",
+      "Tenacidad"
+    ],
+    "desc": "Entona una melodía relajante que induce al sueño profundo a quien la escuche."
+  },
+  {
+    "id": "wigglytuff",
+    "dex": 40,
+    "name": "Wigglytuff",
+    "type": [
+      "Normal",
+      "Hada"
+    ],
+    "rarity": "poco común",
+    "difficulty": "uncommon",
+    "color": "#c9758a",
+    "shiny": "#8cc9a6",
+    "mark": "♪",
+    "ability": [
+      "Gran Encanto"
+    ],
+    "desc": "Su cuerpo elástico se infla hasta multiplicar su volumen para intimidar rivales."
+  },
+  {
+    "id": "zubat",
+    "dex": 41,
+    "name": "Zubat",
+    "type": [
+      "Veneno",
+      "Volador"
+    ],
+    "rarity": "común",
+    "difficulty": "common",
+    "color": "#6575b7",
+    "shiny": "#e2b95b",
+    "mark": "⋎",
+    "ability": [
+      "Foco Interno",
+      "Infiltración"
+    ],
+    "desc": "Se orienta mediante ultrasonidos en los rincones más oscuros de las cavernas."
+  },
+  {
+    "id": "oddish",
+    "dex": 43,
+    "name": "Oddish",
+    "type": [
+      "Planta",
+      "Veneno"
+    ],
+    "rarity": "común",
+    "difficulty": "common",
+    "color": "#428c6e",
+    "shiny": "#598fc0",
+    "mark": "♣",
+    "ability": [
+      "Clorofila",
+      "Efecto Espora"
+    ],
+    "desc": "De noche echa raíces y vaga en busca de suelo fértil bajo la luna."
+  },
+  {
+    "id": "meowth",
+    "dex": 52,
+    "name": "Meowth",
+    "type": [
+      "Normal"
+    ],
+    "rarity": "común",
+    "difficulty": "common",
+    "color": "#e4c875",
+    "shiny": "#bb8855",
+    "mark": "◡",
+    "ability": [
+      "Recogida",
+      "Experto"
+    ],
+    "desc": "Le fascinan las monedas brillantes; suele rondar callejones y mercados nocturnos."
+  },
+  {
+    "id": "psyduck",
+    "dex": 54,
+    "name": "Psyduck",
+    "type": [
+      "Agua"
+    ],
+    "rarity": "común",
+    "difficulty": "common",
+    "color": "#e6c84c",
+    "shiny": "#68b8d4",
+    "mark": "≈",
+    "ability": [
+      "Humedad",
+      "Aclimatación"
+    ],
+    "desc": "Padece continuos dolores de cabeza; cuando se intensifican desata poderes psíquicos."
+  },
+  {
+    "id": "golduck",
+    "dex": 55,
+    "name": "Golduck",
+    "type": [
+      "Agua"
+    ],
+    "rarity": "poco común",
+    "difficulty": "uncommon",
+    "color": "#4a8fb5",
+    "shiny": "#427096",
+    "mark": "≈",
+    "ability": [
+      "Humedad"
+    ],
+    "desc": "Nada con extrema elegancia impulsándose con sus palmeadas extremidades."
+  },
+  {
+    "id": "growlithe",
+    "dex": 58,
+    "name": "Growlithe",
+    "type": [
+      "Fuego"
+    ],
+    "rarity": "poco común",
+    "difficulty": "uncommon",
+    "color": "#e38a55",
+    "shiny": "#d9c77b",
+    "mark": "⌁",
+    "ability": [
+      "Intimidación",
+      "Absorbe Fuego"
+    ],
+    "desc": "Leal y valiente guardián. Su pelaje conserva el calor incluso al anochecer."
+  },
+  {
+    "id": "poliwag",
+    "dex": 60,
+    "name": "Poliwag",
+    "type": [
+      "Agua"
+    ],
+    "rarity": "común",
+    "difficulty": "common",
+    "color": "#4b75a6",
+    "shiny": "#5ea2d6",
+    "mark": "≈",
+    "ability": [
+      "Absorbe Agua",
+      "Humedad"
+    ],
+    "desc": "La espiral en su vientre es su órgano interno visible a través de su piel fina."
+  },
+  {
+    "id": "poliwrath",
+    "dex": 62,
+    "name": "Poliwrath",
+    "type": [
+      "Agua",
+      "Lucha"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#325680",
+    "shiny": "#457a4a",
+    "mark": "≈",
+    "ability": [
+      "Absorbe Agua"
+    ],
+    "desc": "Músculos incansables capaces de cruzar océanos a nado sin detenerse."
+  },
+  {
+    "id": "abra",
+    "dex": 63,
+    "name": "Abra",
+    "type": [
+      "Psíquico"
+    ],
+    "rarity": "poco común",
+    "difficulty": "uncommon",
+    "color": "#d7b05d",
+    "shiny": "#9e7abd",
+    "mark": "✧",
+    "ability": [
+      "Sincronía",
+      "Foco Interno"
+    ],
+    "desc": "Duerme 18 horas al día y se teletransporta por instinto al menor sobresalto."
+  },
+  {
+    "id": "bellsprout",
+    "dex": 69,
+    "name": "Bellsprout",
+    "type": [
+      "Planta",
+      "Veneno"
+    ],
+    "rarity": "común",
+    "difficulty": "common",
+    "color": "#a6bd46",
+    "shiny": "#d4cc55",
+    "mark": "♣",
+    "ability": [
+      "Clorofila",
+      "Gula"
+    ],
+    "desc": "Cuerpo ágil y delgado que se dobla para esquivar proyectiles antes de atrapar presas."
+  },
+  {
+    "id": "victreebel",
+    "dex": 71,
+    "name": "Victreebel",
+    "type": [
+      "Planta",
+      "Veneno"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#8aa631",
+    "shiny": "#baa83b",
+    "mark": "♣",
+    "ability": [
+      "Clorofila"
+    ],
+    "desc": "Atrae a incautos con un dulce aroma antes de atraparlos en su interior ácido."
+  },
+  {
+    "id": "geodude",
+    "dex": 74,
+    "name": "Geodude",
+    "type": [
+      "Roca",
+      "Tierra"
+    ],
+    "rarity": "común",
+    "difficulty": "common",
+    "color": "#bb8759",
+    "shiny": "#708ab9",
+    "mark": "⬟",
+    "ability": [
+      "Cabeza Roca",
+      "Robustez"
+    ],
+    "desc": "Una roca viviente con brazos. Se confunde fácilmente con el terreno pedregoso."
+  },
+  {
+    "id": "ponyta",
+    "dex": 77,
+    "name": "Ponyta",
+    "type": [
+      "Fuego"
+    ],
+    "rarity": "poco común",
+    "difficulty": "uncommon",
+    "color": "#e89e58",
+    "shiny": "#589ee8",
+    "mark": "▲",
+    "ability": [
+      "Fuga",
+      "Absorbe Fuego"
+    ],
+    "desc": "Sus cascos son más duros que el diamante; salta cañones con sus crines ardientes."
+  },
+  {
+    "id": "rapidash",
+    "dex": 78,
+    "name": "Rapidash",
+    "type": [
+      "Fuego"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#cc803b",
+    "shiny": "#6382b5",
+    "mark": "▲",
+    "ability": [
+      "Fuga"
+    ],
+    "desc": "Alcanza los 240 km/h galopando como una centella que incendia el horizonte."
+  },
+  {
+    "id": "slowpoke",
+    "dex": 79,
+    "name": "Slowpoke",
+    "type": [
+      "Agua",
+      "Psíquico"
+    ],
+    "rarity": "común",
+    "difficulty": "common",
+    "color": "#d97b91",
+    "shiny": "#94b3db",
+    "mark": "≈",
+    "ability": [
+      "Despiste",
+      "Ritmo Propio"
+    ],
+    "desc": "Tarda cinco segundos en reaccionar tras recibir un pellizco en la cola."
+  },
+  {
+    "id": "slowbro",
+    "dex": 80,
+    "name": "Slowbro",
+    "type": [
+      "Agua",
+      "Psíquico"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#ba6076",
+    "shiny": "#789ec7",
+    "mark": "≈",
+    "ability": [
+      "Despiste"
+    ],
+    "desc": "Un Shellder mordió su cola despertando una insólita lucidez mental psíquica."
+  },
+  {
+    "id": "magnemite",
+    "dex": 81,
+    "name": "Magnemite",
+    "type": [
+      "Eléctrico",
+      "Acero"
+    ],
+    "rarity": "poco común",
+    "difficulty": "uncommon",
+    "color": "#7797ab",
+    "shiny": "#d4a85b",
+    "mark": "⊕",
+    "ability": [
+      "Imán",
+      "Robustez"
+    ],
+    "desc": "Un Pokémon magnético que levita emitiendo ondas electromagnéticas continuas."
+  },
+  {
+    "id": "gastly",
+    "dex": 92,
+    "name": "Gastly",
+    "type": [
+      "Fantasma",
+      "Veneno"
+    ],
+    "rarity": "poco común",
+    "difficulty": "uncommon",
+    "color": "#8062b1",
+    "shiny": "#65b9ad",
+    "mark": "◉",
+    "ability": [
+      "Levitación"
+    ],
+    "desc": "Nube gaseosa casi imperceptible que envuelve a sus presas en sueños profundos."
+  },
+  {
+    "id": "gengar",
+    "dex": 94,
+    "name": "Gengar",
+    "type": [
+      "Fantasma",
+      "Veneno"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#5e438a",
+    "shiny": "#d0c2e3",
+    "mark": "◉",
+    "ability": [
+      "Cuerpo Maldito"
+    ],
+    "desc": "Se oculta en las sombras de la gente al atardecer y disfruta asustando a los viandantes."
+  },
+  {
+    "id": "onix",
+    "dex": 95,
+    "name": "Onix",
+    "type": [
+      "Roca",
+      "Tierra"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#7a8187",
+    "shiny": "#a89844",
+    "mark": "⬟",
+    "ability": [
+      "Cabeza Roca",
+      "Robustez"
+    ],
+    "desc": "Túneles subterráneos abiertos por su colosal cuerpo de rocas encadenadas."
+  },
+  {
+    "id": "cubone",
+    "dex": 104,
+    "name": "Cubone",
+    "type": [
+      "Tierra"
+    ],
+    "rarity": "poco común",
+    "difficulty": "uncommon",
+    "color": "#b59267",
+    "shiny": "#79a86a",
+    "mark": "⬟",
+    "ability": [
+      "Cabeza Roca",
+      "Pararrayos"
+    ],
+    "desc": "Lleva el cráneo de su difunta madre; sus lamentos nocturnos retumban en la cuenca."
+  },
+  {
+    "id": "marowak",
+    "dex": 105,
+    "name": "Marowak",
+    "type": [
+      "Tierra"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#967347",
+    "shiny": "#5e8c4e",
+    "mark": "⬟",
+    "ability": [
+      "Cabeza Roca"
+    ],
+    "desc": "Ha superado su tristeza y domina el hueso como un bumerán letal en combate."
+  },
+  {
+    "id": "rhyhorn",
+    "dex": 111,
+    "name": "Rhyhorn",
+    "type": [
+      "Tierra",
+      "Roca"
+    ],
+    "rarity": "poco común",
+    "difficulty": "uncommon",
+    "color": "#7a8282",
+    "shiny": "#9e7352",
+    "mark": "⬟",
+    "ability": [
+      "Pararrayos",
+      "Cabeza Roca"
+    ],
+    "desc": "Carga en línea recta destruyendo todo a su paso sin preocuparse por los frenazos."
+  },
+  {
+    "id": "rhydon",
+    "dex": 112,
+    "name": "Rhydon",
+    "type": [
+      "Tierra",
+      "Roca"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#5e6666",
+    "shiny": "#7d5537",
+    "mark": "⬟",
+    "ability": [
+      "Pararrayos"
+    ],
+    "desc": "Su cuerno taladrador pulveriza diamantes y su piel resiste ríos de lava ardiente."
+  },
+  {
+    "id": "scyther",
+    "dex": 123,
+    "name": "Scyther",
+    "type": [
+      "Bicho",
+      "Volador"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#5ea34d",
+    "shiny": "#9358a8",
+    "mark": "✧",
+    "ability": [
+      "Enjambre",
+      "Experto"
+    ],
+    "desc": "Corta árboles con sus guadañas a velocidades imposibles para el ojo humano."
+  },
+  {
+    "id": "pinsir",
+    "dex": 127,
+    "name": "Pinsir",
+    "type": [
+      "Bicho"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#8c6b4d",
+    "shiny": "#457a9e",
+    "mark": "✧",
+    "ability": [
+      "Corte Fuerte",
+      "Rompemoldes"
+    ],
+    "desc": "Pinzas hercúleas en su cabeza capaces de partir por la mitad a cualquier rival."
+  },
+  {
+    "id": "magikarp",
+    "dex": 129,
+    "name": "Magikarp",
+    "type": [
+      "Agua"
+    ],
+    "rarity": "común",
+    "difficulty": "common",
+    "color": "#d95d38",
+    "shiny": "#e0b834",
+    "mark": "≈",
+    "ability": [
+      "Nado Rápido",
+      "Cobardía"
+    ],
+    "desc": "Famoso por su debilidad legendaria; salpica en vano aunque encierra un enigma."
+  },
+  {
+    "id": "gyarados",
+    "dex": 130,
+    "name": "Gyarados",
+    "type": [
+      "Agua",
+      "Volador"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#3b6ea6",
+    "shiny": "#bd3333",
+    "mark": "≈",
+    "ability": [
+      "Intimidación",
+      "Autoestima"
+    ],
+    "desc": "Furia colosal desatada tras evolucionar; provoca tormentas y olas gigantescas."
+  },
+  {
+    "id": "lapras",
+    "dex": 131,
+    "name": "Lapras",
+    "type": [
+      "Agua",
+      "Hielo"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#4a82b8",
+    "shiny": "#7855a8",
+    "mark": "≈",
+    "ability": [
+      "Absorbe Agua",
+      "Caparazón"
+    ],
+    "desc": "Amable y de gran inteligencia; le encanta transportar pasajeros sobre las olas."
+  },
+  {
+    "id": "ditto",
+    "dex": 132,
+    "name": "Ditto",
+    "type": [
+      "Normal"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#8d80c2",
+    "shiny": "#62aca0",
+    "mark": "〰",
+    "ability": [
+      "Flexibilidad",
+      "Impostor"
+    ],
+    "desc": "Puede reorganizar su estructura celular para adoptar la apariencia de cualquier ser."
+  },
+  {
+    "id": "eevee",
+    "dex": 133,
+    "name": "Eevee",
+    "type": [
+      "Normal"
+    ],
+    "rarity": "poco común",
+    "difficulty": "uncommon",
+    "color": "#bd8a62",
+    "shiny": "#7eb2a2",
+    "mark": "✦",
+    "ability": [
+      "Fuga",
+      "Adaptable"
+    ],
+    "desc": "Su código genético inestable le permite evolucionar en múltiples formas singulares."
+  },
+  {
+    "id": "vaporeon",
+    "dex": 134,
+    "name": "Vaporeon",
+    "type": [
+      "Agua"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#4288b3",
+    "shiny": "#9c5da8",
+    "mark": "≈",
+    "ability": [
+      "Absorbe Agua",
+      "Hidratación"
+    ],
+    "desc": "Sus células se funden con el agua de lagos y ríos volviéndose invisible."
+  },
+  {
+    "id": "jolteon",
+    "dex": 135,
+    "name": "Jolteon",
+    "type": [
+      "Eléctrico"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#d9b33b",
+    "shiny": "#7cb559",
+    "mark": "⚡",
+    "ability": [
+      "Absorbe Elec",
+      "Pies Rápidos"
+    ],
+    "desc": "Eriza su pelaje como púas cargadas de 10.000 voltios de pura electricidad estática."
+  },
+  {
+    "id": "flareon",
+    "dex": 136,
+    "name": "Flareon",
+    "type": [
+      "Fuego"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#d9643b",
+    "shiny": "#d4aa55",
+    "mark": "▲",
+    "ability": [
+      "Absorbe Fuego",
+      "Agallas"
+    ],
+    "desc": "Inhala aire y su glándula de fuego lo calienta hasta superar los 900 grados."
+  },
+  {
+    "id": "aerodactyl",
+    "dex": 142,
+    "name": "Aerodactyl",
+    "type": [
+      "Roca",
+      "Volador"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#8b849c",
+    "shiny": "#ba608a",
+    "mark": "⋎",
+    "ability": [
+      "Cabeza Roca",
+      "Presión"
+    ],
+    "desc": "Pokémon prehistórico resucitado; surcaba los cielos del pasado con fauces temibles."
+  },
+  {
+    "id": "snorlax",
+    "dex": 143,
+    "name": "Snorlax",
+    "type": [
+      "Normal"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#386663",
+    "shiny": "#2d4d6b",
+    "mark": "●",
+    "ability": [
+      "Inmunidad",
+      "Sebo"
+    ],
+    "desc": "No se despierta a menos que termine de digerir sus 400 kilos de comida diaria."
+  },
+  {
+    "id": "dratini",
+    "dex": 147,
+    "name": "Dratini",
+    "type": [
+      "Dragón"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#6a9dc7",
+    "shiny": "#dda864",
+    "mark": "≈",
+    "ability": [
+      "Mudar",
+      "Escama Especial"
+    ],
+    "desc": "Esquivo Pokémon serpentino de agua dulce; muda continuamente su piel protectora."
+  },
+  {
+    "id": "dragonair",
+    "dex": 148,
+    "name": "Dragonair",
+    "type": [
+      "Dragón"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#5680ab",
+    "shiny": "#c98bbd",
+    "mark": "≈",
+    "ability": [
+      "Mudar"
+    ],
+    "desc": "Las esferas de su cuello y cola le permiten manipular el clima a voluntad."
+  },
+  {
+    "id": "dragonite",
+    "dex": 149,
+    "name": "Dragonite",
+    "type": [
+      "Dragón",
+      "Volador"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#d49639",
+    "shiny": "#457a4a",
+    "mark": "✦",
+    "ability": [
+      "Foco Interno",
+      "Multiescamas"
+    ],
+    "desc": "De gran corazón y noble espíritu; es capaz de dar la vuelta al mundo en 16 horas."
+  },
+  {
+    "id": "mewtwo",
+    "dex": 150,
+    "name": "Mewtwo",
+    "type": [
+      "Psíquico"
+    ],
+    "rarity": "legendario",
+    "difficulty": "rare",
+    "color": "#7a5a9e",
+    "shiny": "#52965a",
+    "mark": "✧",
+    "ability": [
+      "Presión"
+    ],
+    "desc": "Nacido de experimentos genéticos clandestinos; sus poderes no tienen parangón."
+  },
+  {
+    "id": "mew",
+    "dex": 151,
+    "name": "Mew",
+    "type": [
+      "Psíquico"
+    ],
+    "rarity": "legendario",
+    "difficulty": "rare",
+    "color": "#d67ca6",
+    "shiny": "#569ed6",
+    "mark": "✧",
+    "ability": [
+      "Sincronía"
+    ],
+    "desc": "Se dice que posee el ADN de todos los Pokémon y puede volverse invisible."
+  },
+  {
+    "id": "chikorita",
+    "dex": 152,
+    "name": "Chikorita",
+    "type": [
+      "Planta"
+    ],
+    "rarity": "poco común",
+    "difficulty": "uncommon",
+    "color": "#7ea84c",
+    "shiny": "#baa049",
+    "mark": "♣",
+    "ability": [
+      "Espesura"
+    ],
+    "desc": "Agita la hoja de su cabeza para percibir la temperatura y el olor del entorno."
+  },
+  {
+    "id": "cyndaquil",
+    "dex": 155,
+    "name": "Cyndaquil",
+    "type": [
+      "Fuego"
+    ],
+    "rarity": "poco común",
+    "difficulty": "uncommon",
+    "color": "#bd8c42",
+    "shiny": "#bd6a3a",
+    "mark": "▲",
+    "ability": [
+      "Mar Llamas"
+    ],
+    "desc": "Tímido y reservado; cuando se asusta su espalda estalla en intensas llamaradas."
+  },
+  {
+    "id": "totodile",
+    "dex": 158,
+    "name": "Totodile",
+    "type": [
+      "Agua"
+    ],
+    "rarity": "poco común",
+    "difficulty": "uncommon",
+    "color": "#458ab8",
+    "shiny": "#42a89c",
+    "mark": "≈",
+    "ability": [
+      "Torrente"
+    ],
+    "desc": "Sus poderosas mandíbulas atrapan cualquier cosa que se mueva ante él."
+  },
+  {
+    "id": "espeon",
+    "dex": 196,
+    "name": "Espeon",
+    "type": [
+      "Psíquico"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#b574a4",
+    "shiny": "#5cb862",
+    "mark": "✧",
+    "ability": [
+      "Sincronía",
+      "Espejo Mágico"
+    ],
+    "desc": "Su pelaje aterciopelado percibe corrientes de aire prediciendo el futuro inmediato."
+  },
+  {
+    "id": "umbreon",
+    "dex": 197,
+    "name": "Umbreon",
+    "type": [
+      "Siniestro"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#2b2a30",
+    "shiny": "#363442",
+    "mark": "◉",
+    "ability": [
+      "Sincronía",
+      "Foco Interno"
+    ],
+    "desc": "Sus anillos amarillos brillan misteriosamente en la oscuridad de la noche."
+  },
+  {
+    "id": "steelix",
+    "dex": 208,
+    "name": "Steelix",
+    "type": [
+      "Acero",
+      "Tierra"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#687278",
+    "shiny": "#a38f37",
+    "mark": "⬟",
+    "ability": [
+      "Cabeza Roca",
+      "Robustez"
+    ],
+    "desc": "Su cuerpo templado bajo presiones extremas es más resistente que el diamante."
+  },
+  {
+    "id": "scizor",
+    "dex": 212,
+    "name": "Scizor",
+    "type": [
+      "Bicho",
+      "Acero"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#ad3932",
+    "shiny": "#689e3a",
+    "mark": "✧",
+    "ability": [
+      "Enjambre",
+      "Experto"
+    ],
+    "desc": "Sus pinzas aceradas tienen patrones oculares que confunden al enemigo antes del golpe."
+  },
+  {
+    "id": "heracross",
+    "dex": 214,
+    "name": "Heracross",
+    "type": [
+      "Bicho",
+      "Lucha"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#395fa3",
+    "shiny": "#96428c",
+    "mark": "✧",
+    "ability": [
+      "Enjambre",
+      "Agallas"
+    ],
+    "desc": "Su colosal cuerno frontal puede arrojar por los aires objetos cien veces más pesados."
+  },
+  {
+    "id": "tyranitar",
+    "dex": 248,
+    "name": "Tyranitar",
+    "type": [
+      "Roca",
+      "Siniestro"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#526e47",
+    "shiny": "#7d6d45",
+    "mark": "⬟",
+    "ability": [
+      "Chorro Arena"
+    ],
+    "desc": "Camina derribando montañas a su paso para crear su propio territorio."
+  },
+  {
+    "id": "gardevoir",
+    "dex": 282,
+    "name": "Gardevoir",
+    "type": [
+      "Psíquico",
+      "Hada"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#56a678",
+    "shiny": "#527da6",
+    "mark": "✧",
+    "ability": [
+      "Sincronía",
+      "Rastreo"
+    ],
+    "desc": "Capaz de abrir pequeños agujeros negros con energía psíquica para proteger a su entrenador."
+  },
+  {
+    "id": "lucario",
+    "dex": 448,
+    "name": "Lucario",
+    "type": [
+      "Lucha",
+      "Acero"
+    ],
+    "rarity": "raro",
+    "difficulty": "rare",
+    "color": "#3d6c8f",
+    "shiny": "#9e913a",
+    "mark": "⚡",
+    "ability": [
+      "Impasible",
+      "Foco Interno"
+    ],
+    "desc": "Percibe el aura de todos los seres vivos y puede anticipar cualquier movimiento."
+  }
+]
